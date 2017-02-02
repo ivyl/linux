@@ -125,6 +125,132 @@ static const struct drm_i915_mocs_entry skylake_mocs_table[] = {
 	  /* 0x0030 */
 	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_WB),
 	},
+	{
+	  /* 0x00000037 */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_LLC) |
+			   LE_LRUM(3) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0030 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_WB),
+	},
+	{
+	  /* 0x00000039 */
+	  .control_value = LE_CACHEABILITY(LE_UC) |
+			   LE_TGT_CACHE(LE_TC_LLC_ELLC) |
+			   LE_LRUM(3) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0030 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_WB),
+	},
+	{
+	  /* 0x00000033 */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_PAGETABLE) |
+			   LE_LRUM(3) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0030 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_WB),
+	},
+	{
+	  /* 0x00000017 */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_LLC) |
+			   LE_LRUM(1) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0030 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_WB),
+	},
+	{
+	  /* 0x00000037 */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_LLC) |
+			   LE_LRUM(3) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0010 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
+	{
+	  /* 0x00000039 */
+	  .control_value = LE_CACHEABILITY(LE_UC) |
+			   LE_TGT_CACHE(LE_TC_LLC_ELLC) |
+			   LE_LRUM(3) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0010 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
+	{
+	  /* 0x00000017 */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_LLC) |
+			   LE_LRUM(1) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0010 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
+	{
+	  /* 0x0000003b */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_LLC_ELLC) |
+			   LE_LRUM(3) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0010 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
+	{
+	  /* 0x00000033 */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_PAGETABLE) |
+			   LE_LRUM(3) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0010 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
+	{
+	  /* 0x00000019 */
+	  .control_value = LE_CACHEABILITY(LE_UC) |
+			   LE_TGT_CACHE(LE_TC_LLC_ELLC) |
+			   LE_LRUM(1) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0010 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
+	{
+	  /* 0x00000003 */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_PAGETABLE) |
+			   LE_LRUM(0) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0010 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
+	{
+	  /* 0x0000001b */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_LLC_ELLC) |
+			   LE_LRUM(1) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0010 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
+	{
+	  /* 0x0000001b */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_LLC_ELLC) |
+			   LE_LRUM(1) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0030 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_WB),
+	},
+	{
+	  /* 0x00000013 */
+	  .control_value = LE_CACHEABILITY(LE_WB) |
+			   LE_TGT_CACHE(LE_TC_PAGETABLE) |
+			   LE_LRUM(1) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+	  /* 0x0010 */
+	  .l3cc_value =   L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
 };
 
 /* NOTE: the LE_TGT_CACHE is not used on Broxton */
