@@ -159,6 +159,36 @@ static const struct drm_i915_mocs_entry broxton_mocs_table[] = {
 	  /* 0x0030 */
 	  .l3cc_value =    L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_WB),
 	},
+	{
+	  /* 0x00000005 */
+	  .control_value = LE_CACHEABILITY(LE_UC) |
+			   LE_TGT_CACHE(LE_TC_LLC) |
+			   LE_LRUM(0) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+
+	  /* 0x0030 */
+	  .l3cc_value =    L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_WB),
+	},
+	{
+	  /* 0x00000001 */
+	  .control_value = LE_CACHEABILITY(LE_UC) |
+			   LE_TGT_CACHE(LE_TC_PAGETABLE) |
+			   LE_LRUM(0) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+
+	  /* 0x0010 */
+	  .l3cc_value =    L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
+	{
+	  /* 0x00000005 */
+	  .control_value = LE_CACHEABILITY(LE_UC) |
+			   LE_TGT_CACHE(LE_TC_LLC) |
+			   LE_LRUM(0) | LE_AOM(0) | LE_RSC(0) | LE_SCC(0) |
+			   LE_PFM(0) | LE_SCF(0),
+
+	  /* 0x0010 */
+	  .l3cc_value =    L3_ESC(0) | L3_SCC(0) | L3_CACHEABILITY(L3_UC),
+	},
 };
 
 /**
