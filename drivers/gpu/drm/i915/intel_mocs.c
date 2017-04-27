@@ -96,6 +96,7 @@ struct drm_i915_mocs_table {
  *       may only be updated incrementally by adding entries at the
  *       end.
  */
+#define SKL_MOCS_VERSION 1
 static const struct drm_i915_mocs_entry skylake_mocs_table[] = {
 	[I915_MOCS_UNCACHED] = {
 	  /* 0x00000009 */
@@ -254,6 +255,7 @@ static const struct drm_i915_mocs_entry skylake_mocs_table[] = {
 };
 
 /* NOTE: the LE_TGT_CACHE is not used on Broxton */
+#define BXT_MOCS_VERSION 1
 static const struct drm_i915_mocs_entry broxton_mocs_table[] = {
 	[I915_MOCS_UNCACHED] = {
 	  /* 0x00000009 */
@@ -337,10 +339,12 @@ static bool get_mocs_settings(struct drm_i915_private *dev_priv,
 	if (IS_GEN9_BC(dev_priv)) {
 		table->size  = ARRAY_SIZE(skylake_mocs_table);
 		table->table = skylake_mocs_table;
+		dev_priv->mocs_version = SKL_MOCS_VERSION;
 		result = true;
 	} else if (IS_GEN9_LP(dev_priv)) {
 		table->size  = ARRAY_SIZE(broxton_mocs_table);
 		table->table = broxton_mocs_table;
+		dev_priv->mocs_version = BXT_MOCS_VERSION;
 		result = true;
 	} else {
 		WARN_ONCE(INTEL_INFO(dev_priv)->gen >= 9,

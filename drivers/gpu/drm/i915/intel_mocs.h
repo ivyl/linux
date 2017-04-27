@@ -47,6 +47,16 @@
  * and are programmed in the first batch after the context is loaded
  * (with the hardware workarounds). This will then let the usual
  * context handling keep the MOCS in step.
+ *
+ * Updates and versioning:
+ *
+ * I915_PARAM_MOCS_VERSION is used by userspace to query current version of
+ * MOCS.
+ *
+ * New entries can be added (can be more than one at a time) version should be
+ * incremented by one.
+ *
+ * Existing entries cannot be remove or changed.
  */
 
 #include <drm/drmP.h>

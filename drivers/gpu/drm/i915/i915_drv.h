@@ -2195,6 +2195,8 @@ struct drm_i915_private {
 	u32 pm_guc_events;
 	u32 pipestat_irq_mask[I915_MAX_PIPES];
 
+	int mocs_version;
+
 	struct i915_hotplug hotplug;
 	struct intel_fbc fbc;
 	struct i915_drrs drrs;

@@ -299,6 +299,11 @@ static int i915_getparam(struct drm_device *dev, void *data,
 		if (!value)
 			return -ENODEV;
 		break;
+	case I915_PARAM_MOCS_VERSION:
+		value = dev_priv->mocs_version;
+		if (!value)
+			return -ENODEV;
+		break;
 	case I915_PARAM_EU_TOTAL:
 		value = INTEL_INFO(dev_priv)->sseu.eu_total;
 		if (!value)

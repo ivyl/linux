@@ -418,6 +418,11 @@ typedef struct drm_i915_irq_wait {
  */
 #define I915_PARAM_HAS_EXEC_CAPTURE	 45
 
+/*  Query the version of MOCS table. Existing entries cannot be altered, i.e.
+ *  it's okay if version is greater or equal to the desired one.
+ */
+#define I915_PARAM_MOCS_VERSION		 46
+
 typedef struct drm_i915_getparam {
 	__s32 param;
 	/*
